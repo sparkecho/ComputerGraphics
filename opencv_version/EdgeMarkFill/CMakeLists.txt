@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project( emf )
+ADD_DEFINITIONS(-DENABLE_DEBUG -g -std=c++11)
+find_package( OpenCV REQUIRED )
+add_executable( emf  main.cpp )
+target_link_libraries( emf ${OpenCV_LIBS} )
